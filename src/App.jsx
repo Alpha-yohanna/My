@@ -73,7 +73,7 @@ function App() {
           <div className="mx-auto w-full max-w-md">
             <div className="overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/70 p-3 shadow-2xl shadow-black/40">
               <img
-                src="/src/Hero.jpeg"
+                src="/Hero.jpeg"
                 alt="Alpha Yohanna"
                 className="h-[420px] w-full rounded-[1.5rem] object-cover object-center"
               />
@@ -133,8 +133,7 @@ function App() {
               </h3>
               <p className="mt-4 text-sm leading-7 text-slate-300">
                 HTML5, CSS3, JavaScript, React, React Native, Firebase,
-                Supabase, Git & GitHub, REST APIs, WordPress, Canva, and
-                Microsoft Office Suite.
+                Supabase, Git & GitHub, REST APIs, and Microsoft Office Suite.
               </p>
             </div>
           </div>
@@ -316,7 +315,7 @@ function App() {
             onClick={() => goToView("booking")}
             className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-blue-600 hover:text-white"
           >
-            I agree and continue
+            I agree & continue
           </button>
         </div>
       </div>
