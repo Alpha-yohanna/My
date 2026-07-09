@@ -75,7 +75,7 @@ function App() {
               <img
                 src="/Hero.jpeg"
                 alt="Alpha Yohanna"
-                className="h-[420px] w-full rounded-[1.5rem] object-cover object-center"
+                className="w-full h-auto md:h-[420px] rounded-[1.5rem] object-contain md:object-cover md:object-center"
               />
             </div>
           </div>
