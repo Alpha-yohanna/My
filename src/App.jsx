@@ -464,11 +464,22 @@ function App() {
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
-                      fill="currentColor"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       aria-hidden
                     >
                       <rect x="3" y="3" width="18" height="18" rx="5" />
-                      <circle cx="12" cy="12" r="3.2" fill="white" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle
+                        cx="17.5"
+                        cy="6.5"
+                        r="1"
+                        fill="currentColor"
+                        stroke="none"
+                      />
                     </svg>
                   );
                 case "LinkedIn":
@@ -483,22 +494,16 @@ function App() {
                       <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM0 8h5v13H0zM7 8h4.8v1.8h.1c.7-1.2 2.4-2.5 4.9-2.5C22 7.3 24 9.7 24 14.1V21H19v-6.1c0-1.5-.1-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H7z" />
                     </svg>
                   );
-                default:
+                case "X":
                   return (
                     <svg
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
-                      fill="none"
+                      fill="currentColor"
                       aria-hidden
                     >
-                      <path
-                        d="M3 12h18M12 3v18"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
+                      <path d="M18.244 2H21l-6.56 7.5L22 22h-6.828l-5.348-6.993L3.707 22H1l7.017-8.019L2 2h7l4.835 6.37L18.244 2Zm-1.196 18h1.497L7.137 3.896H5.53L17.048 20Z" />
                     </svg>
                   );
               }
