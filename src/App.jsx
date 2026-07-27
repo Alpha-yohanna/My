@@ -52,7 +52,7 @@ function App() {
               products that are thoughtful, fast, and built to elevate your
               brand.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-start">
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-start">
               <button
                 type="button"
                 onClick={() => goToView("terms")}
@@ -302,7 +302,7 @@ function App() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
           <button
             type="button"
             onClick={() => goToView("home")}
@@ -336,7 +336,7 @@ function App() {
           steps.
         </p>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <button
             type="button"
             onClick={() => goToView("home")}
@@ -345,7 +345,7 @@ function App() {
             Back to Home
           </button>
           <a
-            href="https://calendly.com/alphayohanna33/30min"
+            href="https://calendly.com/alphayohanna33/new-meeting"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-blue-600 hover:text-white"
