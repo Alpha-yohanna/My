@@ -4,6 +4,7 @@ const navLinks = [
   { view: "home", label: "Home" },
   { view: "home", label: "About", section: "about" },
   { view: "home", label: "Services", section: "services" },
+  { view: "home", label: "Work", section: "work" },
   { view: "home", label: "Contact", section: "contact" },
   { view: "terms", label: "Project Terms" },
 ];
@@ -17,6 +18,14 @@ const socialLinks = [
   },
   { href: "https://www.linkedin.com/in/alphayohanna", label: "LinkedIn" },
 ];
+
+const featuredProject = {
+  title: "DigitalAgency",
+  image: "/digital-agency.jpg",
+  href: "https://alpha-yohanna.github.io/DigitalAgency/",
+  description:
+    "A clean agency website designed to present services clearly and guide visitors toward action.",
+};
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,19 +49,18 @@ function App() {
     <>
       <section
         id="home"
-        className="hero flex min-h-[90vh] flex-col items-center justify-center px-5 py-16 text-center"
+        className="hero flex min-h-[78vh] flex-col items-center justify-center px-5 py-16 text-center"
       >
-        <div className="grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:text-left">
-          <div className="max-w-2xl">
+        <div className="w-full max-w-4xl">
+          <div>
             <h2 className="mt-4 text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-              I build polished web experiences that feel timeless.
+              Hi, I'm Alpha Dev.I build software people actually use.
             </h2>
             <p className="mt-6 text-base leading-8 text-slate-300 sm:text-lg">
-              From sleek business websites to modern web apps, I create digital
-              products that are thoughtful, fast, and built to elevate your
-              brand.
+              Thoughtful web development for businesses, personal brands, and
+              teams that want a simple, professional online presence.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-start">
+            <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row">
               <button
                 type="button"
                 onClick={() => goToView("terms")}
@@ -62,103 +70,39 @@ function App() {
               </button>
               <button
                 type="button"
-                onClick={() => goToView("home", "services")}
+                onClick={() => goToView("home", "work")}
                 className="inline-flex items-center justify-center rounded-2xl border border-white/20 px-8 py-4 text-sm font-semibold text-white transition hover:bg-slate-800"
               >
                 Explore Services
               </button>
             </div>
           </div>
-
-          <div className="mx-auto w-full max-w-md">
-            <div className="overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/70 p-3 shadow-2xl shadow-black/40">
-              <img
-                src="/Hero.jpeg"
-                alt="Alpha Yohanna"
-                className="w-full h-auto md:h-[420px] rounded-[1.5rem] object-contain md:object-cover md:object-center"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
       <section id="about" className="py-20">
-        <div className="mx-auto max-w-5xl rounded-3xl border border-slate-800 bg-slate-950/70 p-8 shadow-sm sm:p-10">
-          <div className="text-center">
+        <div className="mx-auto max-w-3xl rounded-3xl border border-slate-800 bg-slate-950/70 p-8 text-center shadow-sm sm:p-10">
+          <div>
             <p className="text-sm uppercase tracking-[0.25em] text-blue-400">
               About Me
             </p>
-            <h2 className="mt-3 text-3xl font-semibold text-white">Who I am</h2>
-            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
-              I’m Alpha Yohanna, a software engineer focused on building modern,
-              scalable, and user-friendly digital solutions that help businesses
-              grow and stand out online.
+            <p className="mt-5 text-base leading-8 text-white sm:text-lg">
+              I’m Alpha Yohanna, a software engineer who builds responsive
+              websites, web apps, and practical digital tools for businesses and
+              personal brands.
+            </p>
+            <p className="mt-4 text-base leading-8 text-white">
+              My focus is simple: clean design, reliable code, and websites that
+              help people understand your work quickly.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-            <div className="space-y-5 text-left text-base leading-8 text-slate-300">
-              <p>
-                My journey in software engineering began with the ALX Software
-                Engineering program, where I built a strong foundation in
-                problem-solving, clean development practices, and modern
-                software principles.
-              </p>
-              <p>
-                Since then, I’ve continued to grow through real-world projects,
-                creating responsive business websites, custom web applications,
-                and cross-platform mobile experiences that are both practical
-                and reliable.
-              </p>
-              <p>
-                I’m also expanding into AI automation to help businesses
-                streamline workflows, save time, and work smarter with modern
-                technology.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-slate-800 bg-black/30 p-6 text-left">
-              <h3 className="text-xl font-semibold text-white">Specialties</h3>
-              <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-300">
-                <li>• Business website development</li>
-                <li>• Personal portfolio websites</li>
-                <li>• Custom web applications</li>
-                <li>• Mobile app development with React Native</li>
-                <li>• AI automation solutions</li>
-                <li>• Responsive web design and optimization</li>
-              </ul>
-
-              <h3 className="mt-8 text-xl font-semibold text-white">
-                Core Skills
-              </h3>
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                HTML5, CSS3, JavaScript, React, React Native, Firebase,
-                Supabase, Git & GitHub, REST APIs, and Microsoft Office Suite.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-10 rounded-2xl border border-slate-800 bg-slate-900/70 p-6 text-left">
-            <p className="text-base leading-8 text-slate-300">
-              I believe great software is not just about writing clean code;
-              it’s about solving real problems, creating meaningful user
-              experiences, and building digital products that truly last.
-            </p>
-            <div className="mt-6 flex flex-col gap-3 text-sm text-slate-300 sm:flex-row sm:flex-wrap">
-              <a
-                href="mailto:alphayohanna33@gmail.com"
-                className="text-blue-400 underline"
-              >
-                alphayohanna33@gmail.com
-              </a>
-              <span className="hidden sm:inline">•</span>
-              <a
-                href="https://wa.me/08033199422"
-                className="text-blue-400 underline"
-              >
-                +234 803 319 9422
-              </a>
-            </div>
+          <div className="mx-auto mt-8 w-full max-w-xs overflow-hidden rounded-[1.75rem] border border-slate-800 bg-black/30 p-3">
+            <img
+              src="/Hero.jpeg"
+              alt="Alpha Yohanna"
+              className="h-[360px] w-full rounded-[1.25rem] object-cover object-center"
+            />
           </div>
         </div>
       </section>
@@ -180,6 +124,48 @@ function App() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section id="work" className="py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <h2 className="text-3xl font-semibold text-white">Project</h2>
+          </div>
+
+          <div className="mt-10 grid gap-8 rounded-3xl border border-slate-800 bg-slate-950/70 p-8 shadow-sm sm:p-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+            <a
+              href={featuredProject.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mx-auto block w-full max-w-xs overflow-hidden rounded-[1.75rem] border border-slate-800 bg-black/30 p-3"
+            >
+              <div className="relative h-[360px] overflow-hidden rounded-[1.25rem] bg-slate-900">
+                <img
+                  src={featuredProject.image}
+                  alt={`${featuredProject.title} website preview`}
+                  className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.02]"
+                />
+              </div>
+            </a>
+
+            <div className="text-center lg:text-left">
+              <h3 className="text-3xl font-semibold text-white">
+                {featuredProject.title}
+              </h3>
+              <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">
+                {featuredProject.description}
+              </p>
+              <a
+                href={featuredProject.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex w-fit items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-blue-600 hover:text-white"
+              >
+                Visit Live Website
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="contact" className="py-20 text-center">
